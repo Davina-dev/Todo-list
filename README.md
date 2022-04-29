@@ -1,11 +1,23 @@
-<p><img src="https://media2.giphy.com/media/QrpVwPDGmJEIvHwKEc/200w.webp?cid=790b7611irb4o28dlj42xenq3l6m1bsa8t0msslhzs96gpet&rid=200w.webp&ct=s" width="100"></a></p>
+
   
+__________
+  
+ <p align="center"><img src="https://media2.giphy.com/media/QrpVwPDGmJEIvHwKEc/200w.webp?cid=790b7611irb4o28dlj42xenq3l6m1bsa8t0msslhzs96gpet&rid=200w.webp&ct=s" width="100"></a></p>  
+ 
+  ## <p align="center"> Practicing with DOM </p>
+  __________
+
+
+  <p align="center"><img src="./assets/img/rmWeb.png" width="450"></a> 
+  <img src="./assets/img/rmMvl.png" width="197"></a></p>
+
 #
-  
-  ## Practicing with DOM 
-  
+
 - 👾 Build command:
      npm run build
 
 - 🧐 Demo:
     https://todolistdom.netlify.app/
+
+__________
+- ⌨️ with ❤️ by [Davina](https://www.linkedin.com/in/davinamedina/) 😊
