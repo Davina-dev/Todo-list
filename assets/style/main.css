@@ -1,25 +1,23 @@
 
-.container-left{
+.container-aside{
   background-image: url(https://i.pinimg.com/originals/d3/d1/31/d3d131265c6730748983c6a3836e12d7.png);
   background-repeat: no-repeat;
   background-size: cover;
+  opacity: 0.2;
   flex:1;
 }
 .container-center{
   flex:1;
 }
-.container-right{
-  background-image: url(https://i.pinimg.com/originals/d3/d1/31/d3d131265c6730748983c6a3836e12d7.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  flex:1
-}
+
 
 .center-main {
   width: 100%;
   max-width: 30em;
   margin: auto;
-  padding-left: 3.4em;
+  padding:2em 2em 2em  2em;
+  border-top: 2px solid;
+ 
 }
 
 button {

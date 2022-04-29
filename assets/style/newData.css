@@ -1,4 +1,5 @@
 input[name="what"]{
-    width: 20em;
+   background-color: var(--colot-pink);
+   width: 20em;
     height: 2em;
 }

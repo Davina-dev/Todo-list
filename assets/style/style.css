@@ -1,13 +1,13 @@
 @import url(./header.css);
 @import url(./newData.css);
 @import url(./list.css);
-@import url(./footer.css);
 @import url(./main.css);
 
 
 :root {
-    --color-border: #e9e2e2fd;
-    --color-light: #f6f4f4;
+    --color-border: #e2e2e9fd;
+    --color-light: #f4f6f6;
+    --colot-pink: rgba(249, 220, 225, 0.421);
     
   }
   
