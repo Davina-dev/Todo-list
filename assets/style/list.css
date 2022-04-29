@@ -1,0 +1,101 @@
+input[name='what'] {
+  width: 19em;
+}
+
+#task-list {
+  list-style-type: none;
+  padding: 0;
+  --border-color: rgb(184, 184, 184);
+  --radius: 0.5rem;
+}
+
+li {
+  border: 1px solid var(--border-color);
+  border-bottom: none;
+  padding: 0.4rem 0.6rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  -webkit-animation: swing-in-top-fwd 0.5s
+    cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+  animation: swing-in-top-fwd 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+}
+
+@-webkit-keyframes swing-in-top-fwd {
+  0% {
+    -webkit-transform: rotateX(-100deg);
+    transform: rotateX(-100deg);
+    -webkit-transform-origin: top;
+    transform-origin: top;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+    -webkit-transform-origin: top;
+    transform-origin: top;
+    opacity: 1;
+  }
+}
+@keyframes li {
+  0% {
+    -webkit-transform: rotateX(-100deg);
+    transform: rotateX(-100deg);
+    -webkit-transform-origin: top;
+    transform-origin: top;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+    -webkit-transform-origin: top;
+    transform-origin: top;
+    opacity: 1;
+  }
+}
+
+li:first-child {
+  border-radius: var(--radius) var(--radius) 0 0;
+}
+li:last-child {
+  border-radius: 0 0 var(--radius) var(--radius);
+  border-bottom: 1px solid var(--border-color);
+}
+
+li:first-child:last-child {
+  border-radius: var(--radius);
+}
+
+li:hover {
+  background-color: var(--color-light);
+  cursor: pointer;
+}
+
+li span {
+  flex: 1;
+  margin-left: 0.4rem;
+}
+
+li .delete {
+  display: none;
+  color: grey;
+  width: 1rem;
+  height: 1rem;
+}
+
+li:hover .delete {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+li:hover .delete:hover {
+  background-color: rgb(241, 143, 159);
+  color: white;
+  border-radius: 10em;
+  font-weight: bold;
+}
+
+li.checked span {
+  text-decoration: line-through;
+}

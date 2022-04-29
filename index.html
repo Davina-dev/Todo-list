@@ -4,33 +4,38 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/style/style.css" />
     <title>Todo List</title>
   </head>
   <body>
-    <header>
-      <h2>Todo List</h2>
-    </header>
-    <div class="container">
-      <main>
-        <form>
-          <input type="text" name="what" placeholder="add a new task ..." />
-          <button>Add Task</button>
-        </form>
+    <section class="container-aside"> </section>
+    <section class="container-center">
+      <header>
+        <h2>Todo List</h2>
+        <img
+          class="imgDog"
+          src="https://media2.giphy.com/media/dQpUkK59l5Imxsh8jN/giphy.gif?cid=ecf05e47q8lwp2dnhbk52rucpxzpt54m083jngx2rqlkhlcl&rid=giphy.gif&ct=g"
+          alt="gif doggy list"
+        />
+      </header>
+      <div>
+        <main class="center-main">
+          <form class="addTask">
+            <input type="text" name="what" placeholder="add a new task ..." />
+            <button>Add Task</button>
+          </form>
 
-        <ol id="task-list"></ol>
+          <ol id="task-list"></ol>
 
-        <div>
-          <button id="delete-all">Delete All</button>
-          <button id="delete-checked">Delete Checked</button>
           <div>
-            <img
-              src="https://media2.giphy.com/media/dQpUkK59l5Imxsh8jN/giphy.gif?cid=ecf05e47q8lwp2dnhbk52rucpxzpt54m083jngx2rqlkhlcl&rid=giphy.gif&ct=g"
-              alt="gif doggy list"
-            />
+            <button id="delete-all">Delete All</button>
+            <button id="delete-checked">Delete Checked</button>
+            <div></div>
           </div>
-        </div>
-      </main>
-    </div>
+        </main>
+      </div>
+    </section>
+    <section class="container-aside"></section>
 
     <script type="module" src="/main.js"></script>
   </body>
