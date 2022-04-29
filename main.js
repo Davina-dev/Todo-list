@@ -1,14 +1,27 @@
-const form = document.querySelector('form')
-const taskList = document.getElementById('task-list')
+let taskList = [
+  "lavar la ropa"
+]
+
+const formElement = document.querySelector('form')
+const taskListElement = document.getElementById('task-list')
 
 const addTask = () => {
-  const what = form.querySelector('input').value
-  const li = document.createElement('li')
-  li.textContent = what
-  taskList.appendChild(li)
+  const input = formElement.querySelector('input')
+  if (input.value != '') {
+    const li = document.createElement('li')
+    const checkBox = document.createElement('input');
+    checkBox.type = "checkbox";
+    const span = document.createElement('span');
+    span.textContent = input.value;
+    const div = document.createElement('div');
+    div.textContent ="×";
+    li.append(checkBox, span, div);
+    taskListElement.appendChild(li);
+    input.value = '';
+  }
 }
 
-form.addEventListener('submit', (event) => {
-  event.preventDefault();
-  addTask();
+formElement.addEventListener('submit', (event) => {
+  event.preventDefault()
+  addTask()
 })
