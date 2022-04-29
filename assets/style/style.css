@@ -1,28 +1,25 @@
 @import url(./header.css);
-@import url(./newData.css);
+@import url(./addTask.css);
 @import url(./list.css);
 @import url(./main.css);
 
-
 :root {
-    --color-border: #e2e2e9fd;
-    --color-light: #f4f6f6;
-    --colot-pink: rgba(249, 220, 225, 0.421);
-    
-  }
-  
-  *,
-  *::before,
-  *::after {
-    box-sizing: border-box;
-  }
-  
-  
-  
-  body {
-    display: flex;
-    height: 100vh;
-    padding: 0;
-    margin: 0;
-    color: var(--colot-text-light);
-  }
+  --color-border: #e2e2e9fd;
+  --color-light: #f4f6f4;
+  --color-pink: rgba(249, 220, 225, 0.421);
+  --color-blue: rgba(187, 243, 236, 0.421);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  color: var(--colot-text-light);
+}

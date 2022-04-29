@@ -15,6 +15,7 @@ const addTask = () => {
     span.textContent = input.value;
     const div = document.createElement('div');
     div.textContent ="×";
+    div.classList.add("delete");
     li.append(checkBox, span, div);
     taskListElement.appendChild(li);
     input.value = '';
