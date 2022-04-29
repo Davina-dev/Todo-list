@@ -36,6 +36,9 @@ iframe{
   width: 12em;
   opacity: 0.9;
 }
+.logoDav{
+  display: none;
+}
 
 @media (max-width: 800px){
      body{
@@ -49,6 +52,10 @@ iframe{
        display: flex;
        justify-content: center;
        align-items:center ;
+     }
+     .logoDav{
+       display: block;
+       width: 8em;
      }
 }
 
