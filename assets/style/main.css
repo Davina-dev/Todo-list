@@ -36,3 +36,24 @@ iframe{
   width: 12em;
   opacity: 0.9;
 }
+
+@media (max-width: 800px){
+     body{
+       display: flex;
+       flex-direction: column;
+     }
+     iframe {
+       margin: 0;
+     }
+     .container-aside{
+       display: flex;
+       justify-content: center;
+       align-items:c ;
+     }
+}
+
+@media (max-width: 1220px){
+  main{
+    min-width: 29em;;
+  }
+}
