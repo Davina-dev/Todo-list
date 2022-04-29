@@ -1,8 +1,29 @@
-main{
-    width: 100%;
-    max-width: 30em;
-    margin: auto;
-   padding-left: 3.4em;
+
+.container-left{
+  background-image: url(https://i.pinimg.com/originals/d3/d1/31/d3d131265c6730748983c6a3836e12d7.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex:1;
+}
+.container-center{
+  flex:1;
+}
+.container-right{
+  background-image: url(https://i.pinimg.com/originals/d3/d1/31/d3d131265c6730748983c6a3836e12d7.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex:1
 }
 
+.center-main {
+  width: 100%;
+  max-width: 30em;
+  margin: auto;
+  padding-left: 3.4em;
+}
 
+button {
+  box-shadow: inset 0 0 8px 0px rgba(17, 16, 16, 0.68);
+  color: rgb(28, 28, 28);
+  font-weight:900;
+}

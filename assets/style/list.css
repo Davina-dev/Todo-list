@@ -6,6 +6,8 @@
 #task-list li {
   border: 1px solid var(--color-border);
   border-bottom: none;
+  padding: 4px;
+  box-shadow: 0 0 20px 0px var(--color-border);
 }
 
 #task-list li:first-child {

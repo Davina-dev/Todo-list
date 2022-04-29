@@ -6,7 +6,7 @@
 
 
 :root {
-    --color-border: #aca3df;
+    --color-border: #e9e2e2fd;
     --color-light: #f6f4f4;
     
   }
@@ -20,10 +20,9 @@
   
   
   body {
-   
+    display: flex;
+    height: 100vh;
     padding: 0;
     margin: 0;
     color: var(--colot-text-light);
-    
-   
   }
