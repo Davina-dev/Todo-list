@@ -8,36 +8,48 @@
     <title>Todo List</title>
   </head>
   <body>
-    <section class="container-aside"> 
-       <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6zW80jVqLtgSF1yCtGHiiD?utm_source=generator&theme=0" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></section>
-    <section class="container-center">
-     
-      <header>
-        <h2>Todo List</h2>
-        <img
-          class="imgDog"
-          src="https://media2.giphy.com/media/dQpUkK59l5Imxsh8jN/giphy.gif?cid=ecf05e47q8lwp2dnhbk52rucpxzpt54m083jngx2rqlkhlcl&rid=giphy.gif&ct=g"
-          alt="gif doggy list"
-        />
-      </header>
-      <div>
-        <main class="center-main">
-          <form class="addTask">
-            <input type="text" name="what" placeholder="add a new task ..." />
-            <button>Add Task</button>
-          </form>
-
-          <ol id="task-list"></ol>
-
-          <div>
-            <button id="delete-all">Delete All</button>
-            <button id="delete-checked">Delete Checked</button>
-            <div></div>
-          </div>
-        </main>
+    <section class="container">
+      <div class="svg-hero" style="height: 200px; overflow: hidden;">
+        <svg
+          viewBox="0 0 300 140"
+          preserveAspectRatio="none"
+          style="height: 100%; width: 100%;"
+        >
+          <path
+            d="M-1.97,63.64 C149.99,150.00 426.91,-79.44 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+            style="stroke: none; fill: rgb(255, 255, 255);"
+          ></path>
+        </svg>
       </div>
+
+      <section class="container-center">
+        <header>
+          <h2>Todo List</h2>
+          <img
+            class="imgDog"
+            src="https://media2.giphy.com/media/dQpUkK59l5Imxsh8jN/giphy.gif?cid=ecf05e47q8lwp2dnhbk52rucpxzpt54m083jngx2rqlkhlcl&rid=giphy.gif&ct=g"
+            alt="gif doggy list"
+          />
+        </header>
+        <div>
+          <main class="center-main">
+            <form class="addTask">
+              <input type="text" name="what" placeholder="add a new task ..." />
+              <button class="btn-add">Add Task</button>
+            </form>
+
+            <ol id="task-list"></ol>
+
+            <div>
+              <button id="delete-all">Delete All</button>
+              <button id="delete-checked">Delete Checked</button>
+              <button class="btn-source"><a href="https://github.com/Davina-dev/Todo-list">Source</a> </button>
+              <div></div>
+            </div>
+          </main>
+        </div>
+      </section>
     </section>
-    <section class="container-aside"> <img class="logoDav" src="./assets/img/logoDavina.png" alt=""></section>
 
     <script type="module" src="/main.js"></script>
   </body>

@@ -1,0 +1,54 @@
+@media (max-width: 430px) {
+    button{
+        
+        font-size: 10pt;
+        font-weight: 300;
+        
+    }
+}
+
+@media (max-width: 600px) {
+  input[name='what'] {
+    width: 100%;
+  }
+  ol {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .btn-add {
+    height: 1.4em;
+    font-weight: 500;
+    width: 100%;
+  }
+  .btn-source{
+      display: none;
+  }
+  .center-main {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 800px) {
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  iframe {
+    margin: 0.3em;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  header h2 {
+    margin: 0 0 0 1em;
+  }
+  .imgDog {
+    width: 4em;
+  }
+}

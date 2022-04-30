@@ -1,11 +1,14 @@
 input[name='what'] {
   width: 19em;
 }
+ol {
+  width: 95%;
+}
 
 #task-list {
   list-style-type: none;
   padding: 0;
-  --border-color: rgb(184, 184, 184);
+  --border-color: rgb(219, 227, 226);
   --radius: 0.5rem;
 }
 

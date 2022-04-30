@@ -4,4 +4,5 @@ input[name='what'] {
   border: 1px solid rgba(164, 241, 205, 0.566);
   border-bottom: none;
   padding: 0.4rem 0.6rem;
+  height: 3em;
 }
