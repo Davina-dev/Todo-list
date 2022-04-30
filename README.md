@@ -8,8 +8,8 @@ __________
   __________
 
 
-  <p align="center"><img src="./assets/img/rmWeb.png" width="450"></a> 
-  <img src="./assets/img/rmMvl.png" width="197"></a></p>
+  <p align="center"><img src="./assets/img/rmWeb.png" width="236"></a> 
+  <img src="./assets/img/rmMovile.png" width="150"></a></p>
 
 #
 
