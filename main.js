@@ -1,6 +1,5 @@
 // - Modelo: Datos puros en memoria
 // - Render: función que "pinta" el modelo en el DOM.
-
 // Modelo
 class TodoItem {
   constructor(what, done = false) {
@@ -13,16 +12,19 @@ class TodoItem {
   }
 }
 
-let todoList = []
+let todoList = []; //bbdd
+
 
 // View
 
 const formElement = document.querySelector('form')
 const taskListElement = document.getElementById('task-list')
 
+
 // pinta el model en el DOM
 
 const renderListItem = (index, todoItem) => {
+
   const li = document.createElement('li')
 
   const checkBox = document.createElement('input')
@@ -45,25 +47,38 @@ const renderListItem = (index, todoItem) => {
 
   li.addEventListener('click', onItemClick)
   return li
+
 }
 
 const render = () => {
   taskListElement.textContent = '' // Borra interior de taskListElement
   for (let i = 0; i < todoList.length; i++) {
     taskListElement.appendChild(renderListItem(i, todoList[i]))
-  }
+     
+    //localStorage________________________________________________________
+      //save
+      const list = todoList;
+      const listaString = JSON.stringify(list);
+      localStorage.setItem('list', listaString);
+        }
+      //get
+      const tasksJson = localStorage.getItem('list');
+      console.log(JSON.parse(tasksJson))
+      
+
 }
 
 function onItemClick(event) {
   // Para acceder al elemento clicado:
-  // 1) this (si es un function)
+  // 1) this (si es una function)
   // 2) event.target
   const li = this
   const index = Number(li.getAttribute('x-data-index'))
   // 1) Modifico el modelo
   todoList[index].toggle()
-  // 2) Pinter el modelo (todo)
+  // 2) Pinto el modelo (todo)
   render()
+ 
 }
 
 function onItemDelete(event) {
@@ -72,7 +87,11 @@ function onItemDelete(event) {
   const index = Number(li.getAttribute('x-data-index'))
   // 1) Modifico el modelo
   todoList.splice(index, 1)
-  // 2) Pinter el modelo (todo)
+
+  //delete locasStorage________________________________________________
+  localStorage.removeItem(taskListElement[index])
+
+  // 2) Pinto el modelo (todo)
   render()
   // Consumir el click y que no llegue más arriba (en particular al <li>)
   event.stopPropagation()
@@ -86,11 +105,13 @@ const addTask = () => {
     input.value = '' // form.reset()
     // 2) Pintar el modelo
     render()
+   
   }
+  
 }
 
 formElement.addEventListener('submit', (event) => {
-  event.preventDefault()
+  event.preventDefault() //evita comportamiento x defecto del formulario de enviar al resvidor (recargar)
   addTask()
 })
 
@@ -104,3 +125,5 @@ document.getElementById('delete-checked').addEventListener('click', () => {
 })
 
 render()
+
+
