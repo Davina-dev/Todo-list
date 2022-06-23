@@ -59,12 +59,12 @@ const render = () => {
     //localStorage________________________________________________________
       //save
       const list = todoList;
-      const listaString = JSON.stringify(list);
+      const listaString = JSON.stringify(list) ;
       localStorage.setItem('list', listaString);
         }
       //get
-      const tasksJson = localStorage.getItem('list');
-      console.log(JSON.parse(tasksJson))
+      const tasksJson = JSON.parse(localStorage.getItem('list'))||[];
+      console.log(tasksJson);
       
 
 }
@@ -115,6 +115,10 @@ formElement.addEventListener('submit', (event) => {
   event.preventDefault() //evita comportamiento x defecto del formulario de enviar al resvidor (recargar)
   addTask()
 })
+
+
+
+
 
 document.getElementById('delete-all').addEventListener('click', () => {
   todoList = []
