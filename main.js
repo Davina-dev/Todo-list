@@ -53,25 +53,23 @@ const renderListItem = (index, todoItem) => {
 
 const render = () => {
   taskListElement.textContent = '' // Borra interior de taskListElement
-  for (let i = 0; i < todoList.length; i++) {
-    taskListElement.appendChild(renderListItem(i, todoList[i]))
+   for (let i = 0; i < todoList.length; i++) {
+     taskListElement.appendChild(renderListItem(i, todoList[i]))
      
     //localStorage________________________________________________________
       //save
       const list = todoList;
       const listaString = JSON.stringify(list) ;
       localStorage.setItem('list', listaString);
-        }  
-        
-        //ver del Storage____________________________________________________
-const tasksJson = JSON.parse(localStorage.getItem('list'))||[];
-console.log(tasksJson);
+  }
 
-for (let j=0; j<tasksJson.length; j++){
-  taskListElement.appendChild(renderListItem(j, tasksJson[j]))
+  //ver del Storage____________________________________________________
+  const tasksJson = JSON.parse(localStorage.getItem('list'))||[];
+  for (let j=0; j<tasksJson.length; j++){
+    console.log(tasksJson[j].what);
+    //no funciona bien --> taskListElement.appendChild(renderListItem(j, tasksJson[j]))
+  }
 }
-}
-
 
 
 function onItemClick(event) {
