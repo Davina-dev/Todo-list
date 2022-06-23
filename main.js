@@ -2,9 +2,10 @@
 // - Render: función que "pinta" el modelo en el DOM.
 // Modelo
 class TodoItem {
-  constructor(what, done = false) {
-    this.what = what
-    this.done = done
+  constructor(what, done = false, id) {
+    this.what = what,
+    this.done = done,
+    this.id = Date.now()
   }
 
   toggle() {
