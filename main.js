@@ -61,13 +61,18 @@ const render = () => {
       const list = todoList;
       const listaString = JSON.stringify(list) ;
       localStorage.setItem('list', listaString);
-        }
-      //get
-      const tasksJson = JSON.parse(localStorage.getItem('list'))||[];
-      console.log(tasksJson);
-      
+        }  
+        
+        //ver del Storage____________________________________________________
+const tasksJson = JSON.parse(localStorage.getItem('list'))||[];
+console.log(tasksJson);
 
+for (let j=0; j<tasksJson.length; j++){
+  taskListElement.appendChild(renderListItem(j, tasksJson[j]))
 }
+}
+
+
 
 function onItemClick(event) {
   // Para acceder al elemento clicado:
