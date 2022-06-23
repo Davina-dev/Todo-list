@@ -54,7 +54,18 @@ const render = () => {
   taskListElement.textContent = '' // Borra interior de taskListElement
   for (let i = 0; i < todoList.length; i++) {
     taskListElement.appendChild(renderListItem(i, todoList[i]))
-  }
+     
+    //localStorage________________________________________________________
+      //save
+      const list = todoList;
+      const listaString = JSON.stringify(list);
+      localStorage.setItem('list', listaString);
+        }
+      //get
+      const tasksJson = localStorage.getItem('list');
+      console.log(JSON.parse(tasksJson))
+      
+
 }
 
 function onItemClick(event) {
@@ -67,6 +78,7 @@ function onItemClick(event) {
   todoList[index].toggle()
   // 2) Pinto el modelo (todo)
   render()
+ 
 }
 
 function onItemDelete(event) {
@@ -75,6 +87,10 @@ function onItemDelete(event) {
   const index = Number(li.getAttribute('x-data-index'))
   // 1) Modifico el modelo
   todoList.splice(index, 1)
+
+  //delete locasStorage________________________________________________
+  localStorage.removeItem(taskListElement[index])
+
   // 2) Pinto el modelo (todo)
   render()
   // Consumir el click y que no llegue más arriba (en particular al <li>)
@@ -109,3 +125,5 @@ document.getElementById('delete-checked').addEventListener('click', () => {
 })
 
 render()
+
+
